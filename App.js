@@ -1,23 +1,14 @@
 import React from "react";
-import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  Image,
-  TouchableWithoutFeedback,
-  Button,
-  Alert,
-  StatusBar,
-  Platform,
-} from "react-native";
+import { Platform, SafeAreaView, StatusBar, StyleSheet } from "react-native";
+import AppCard from "./app/components/AppCard";
+import colors from "./app/config/colors";
+import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
 import ViewImageScreen from "./app/screens/ViewImageScreen";
-import WelcomeScreen from "./app/screens/WelcomeScreen";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <WelcomeScreen />
+      <ViewImageScreen />
     </SafeAreaView>
   );
 }
