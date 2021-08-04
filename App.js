@@ -1,14 +1,12 @@
+import Constants from "expo-constants";
 import React from "react";
-import { Platform, SafeAreaView, StatusBar, StyleSheet } from "react-native";
-import AppCard from "./app/components/AppCard";
-import colors from "./app/config/colors";
-import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
-import ViewImageScreen from "./app/screens/ViewImageScreen";
+import { SafeAreaView, StyleSheet } from "react-native";
+import MessagesScreen from "./app/screens/MessagesScreen";
 
 export default function App() {
   return (
     <SafeAreaView style={styles.container}>
-      <ViewImageScreen />
+      <MessagesScreen />
     </SafeAreaView>
   );
 }
@@ -16,6 +14,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: Platform.OS == "android" ? StatusBar.currentHeight : 0,
+    //paddingTop: Platform.OS == "android" ? StatusBar.currentHeight : 0, //Permet de laisser de la place sur android en haut
+    paddingTop: Constants.statusBarHeight, //Meilleur façon de faire
   },
 });
